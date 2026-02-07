@@ -1,0 +1,41 @@
+'''this is a worksheet on learning numpy'''
+from ast import Tuple
+import numpy as np
+
+
+'''create a simple array'''
+def create_simple_array():
+    arr = np.array([1, 2, 3, 4, 5])
+    print(arr)
+
+'''create  random array'''#this is np.random.rand
+def create_random_array(arr_shape: tuple):
+    rand_arr = np.random.rand(*arr_shape)
+    print(rand_arr)
+
+'''the shape of the array'''#this is np.ndarray.shape
+def get_array_shape(data: np.ndarray)->tuple:
+    result=Tuple(data.shape)
+    return result
+
+'''the data type of the array'''#this is np.ndarray.dtype
+def  dtype(data: np.ndarray)->str:
+    result=str(data.dtype)
+    return result
+
+'''creating a ndarray'''#definition of ndarray is a multi-dimensional array of the same data type
+def crreat_ndarray(data: list)->np.ndarray:
+    result=np.array(data)
+    return result
+
+#the dimension of the array we can use .ndim method
+
+''' create a zero array'''#this is np.zeros
+def zero_array(arr_shape: tuple)->np.ndarray:
+    result=np.zeros(arr_shape)
+    return result
+
+''' create a one array'''#this is np.ones
+def one_array(arr_shape: tuple)->np.ndarray:
+    result=np.ones(arr_shape)
+    return result
